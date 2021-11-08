@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.*;
 Поиск может найти разные элементы, так как у элемента h1 может не быть вложенного элемента div.
 */
 
-
+// Задание 2
 public class SearchSoftAssertions {
 
     @Test
@@ -42,11 +42,11 @@ public class SearchSoftAssertions {
                 "}"));
     }
 
-    //3. Запрограммируйте Drag&Drop с помощью Selenide.actions()
+
+//3. Запрограммируйте Drag&Drop с помощью Selenide.actions()
 
     @Test
     void moveDragAndDrop() {
-
         //- Откройте https://the-internet.herokuapp.com/drag_and_drop
         open("https://the-internet.herokuapp.com/drag_and_drop");
         //- Перенесите прямоугольник А на место В
@@ -54,7 +54,6 @@ public class SearchSoftAssertions {
         //- Проверьте, что прямоугольники действительно поменялись
         $("#column-a").shouldHave(Condition.text("B"));
         $("#column-b").shouldHave(Condition.text("A"));
-        sleep(3000);
     }
 }
 
